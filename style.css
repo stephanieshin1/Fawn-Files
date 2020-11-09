@@ -1,0 +1,375 @@
+* {
+    cursor:url(images/cursor.png), default;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background: url(images/fb_bg.png);
+    background-repeat: repeat;
+    font-family: 'VT323', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.pointer {
+    cursor:url(images/select_cursor.png), pointer;
+}
+
+/** HEADER CSS **/
+
+header.top {
+    height: 2em;
+    width: 100%;
+    background: url(images/header_bg.png);
+    background-repeat: repeat;
+    color: white;
+    text-align: right;
+    border-radius: 0;
+}
+
+header.top p {
+    font-size: 1.5em;
+    padding: 0.1em;
+    padding-right: 0.5em;
+}
+
+.version {
+    float: right;
+    margin-left: 5%;
+}
+
+header.top p.user {
+    float: left;
+    margin-left: 1.5em;
+}
+
+header.top img {
+    float: left;
+}
+
+/** MAIN CSS **/
+
+header {
+    border-radius: 10px 10px 0px 0px;
+}
+
+section {
+    background-color: white;
+    position: absolute;
+    width: 30%;
+    height: 480px;
+    display: none;
+    background: url(images/window_bg.png);
+    border-radius: 10px;
+}
+
+section.gifs {
+    top: 20%;
+    left: 50%;
+    background: url(images/window_bg2.png);
+    width: 40%;
+    height:320px;
+    display: block;
+}
+
+section.pics {
+    top: 35%;
+    left: 30%;
+    background: url(images/window_bg2.png);
+    width: 40%;
+    height:320px;
+}
+
+section.note, section.poem, section.login, section.chat, section.login_popup {
+    top: 30%;
+    left: 15%;
+    width: 20%;
+}
+
+section.chat {
+    top: 10%;
+    left: 30%;
+    background:url(images/window_bg3.png);
+}
+
+article.login_popup {
+    margin: auto;
+    background: url(images/window_bg4.png);
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+article.login_popup h1 {
+    font-size:2em;
+    padding: 1em 0;
+    color: black;
+}
+
+article.login_popup label {
+    display: block;
+    font-size: 2em;
+    text-align: left;
+    padding-left: 0.3em;
+    color: #627a85;
+}
+
+section.note {
+    display: block;
+}
+
+header.window, figure.gif_img header {
+    color: white;
+    background: url(images/window_header.png);
+    background-repeat: repeat-x;
+    /** background-color: #3d3d3d; **/
+    width: 100%;
+    height: 1.5em;
+}
+
+header.window h1 {
+    float: left;
+    margin-left: 0.5em;
+}
+
+header.window img {
+    float: right;
+    position: relative;
+    max-width: 1.5em;
+}
+
+figure {
+    display: inline-block;
+}
+
+figure.gif_file {
+    margin: 0.5em;
+}
+
+figcaption {
+    font-size: 110%;
+    text-align: center;
+}
+
+aside {
+    width: 10%;
+    text-align: center;
+}
+
+aside.left {float:left;}
+aside.right {float:right;}
+
+aside p {
+    margin-bottom: 2em;
+}
+
+main.window p, main.window h3 {
+    padding: 0.5em 1em 0em 1em;
+}
+
+#poem_file {
+    height: 400px;
+    width: 25%;
+    left: 30%;
+    top: 10%;
+}
+
+#login_file {
+    top: 25%;
+    left: 40%;
+}
+
+.text {
+    margin-top: 1em;
+    text-align: center;
+}
+
+textarea {
+    width: 90%;
+    height: 330px;
+    background-color: transparent;
+    /**border: none;**/
+    resize: none;
+    outline: none;
+    font-family: 'VT323', monospace;
+    font-size: 100%;
+    border: none;
+}
+
+article input {
+    background-color: lightgrey;
+    resize: none;
+    height: 1em;
+    margin-left: 0.5em;
+}
+
+figure.gif_img {
+    width: 200px;
+    background-image: url(images/window_bg.png);
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+}
+
+figure.gif_img header {
+    width: 200px;
+    height: 2em;
+    font-size: 75%;
+}
+
+figure.gif_img img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+figure.gif_img header img{
+    margin-top: 0.2em;
+}
+
+#hotdog {
+    top: 40%;
+    left: 40%;
+}
+
+#panda {
+    top: 45%;
+    left: 45%;
+}
+
+button {
+    display: block;
+    margin: auto;
+    padding: 0.5em 1.5em;
+    font-size: 1.5em;
+    background: url(images/window_bg3.png);
+    color: black;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: none;
+    font-family: 'VT323', monospace;
+    margin-top: 1.5em;
+}
+
+#error_message {
+    color: red;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 1em;
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: #A97297;
+}
+
+.avatar img, .mandy_avatar img, .fawn_avatar img {
+    max-width: 40px;
+    border-radius: 50px;
+    display: block;
+}
+
+.avatar img {
+    max-width: 70px;
+}
+
+#mandy_chat {
+    display: none;
+    border-radius: 10px;
+}
+
+.chat-title {
+    text-align: center;
+    padding: 0.5em;
+    background-color: lightblue;
+}
+
+.chat-title h3 {
+    padding: 0.5em;
+}
+
+.message-box button {
+    background-image: none;
+    background-color: lightblue;
+    float: left;
+    font-size: 1em;
+    float: right;
+    margin: auto;
+    padding: 0.5em 0.8em;
+}
+.message-input {
+    height: 2em;
+    width: 75%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.3em;
+}
+
+.message-box {
+    padding: 0.2em;
+}
+
+.messages {
+    height: 280px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+input[type=text], input[type=password] {
+    display: block;
+    padding: 0.5em;
+    font-family: 'VT323', monospace;
+    width: 75%;
+    font-size: 1.2em;
+}
+
+
+.mandy_message, .fawn_message {
+    padding: 0.5em;
+}
+
+.mandy_message p, .fawn_message p {
+    background-color: white;
+    border-radius: 20px;
+    padding: 0.5em;
+    margin-bottom: 0.3em;
+    width: max-content;
+    text-align: left;
+    max-width: 65%;
+}
+
+.mandy_message p{
+    clear: both;
+    float: left;
+}
+
+.fawn_message p{
+    clear: both;
+    float: right;
+    word-wrap: break-word;
+}
+
+.fawn_avatar {
+    clear: both;
+    float: right;
+    margin-bottom: 0.3em;
+}
+
+.mandy_avatar {
+    clear: both;
+    float: left;
+    margin-bottom: 0.3em;
+}
+
+.mandy_avatar img {
+    clear: both;
+    float: left;
+}
+
+.fawn_avatar img {
+    clear: both;
+    float: right;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Fawn Files</title>
+	<link rel="shortcut icon" href="images/select_cursor.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+    <!--DESKTOP HEADER BAR-->
+    <header class="top">
+        <img src="images/wifi_icon.png" alt="Wifi Symbol" title="SIGNAL: STRONG">
+        <img src="images/battery_icon.png" alt="Battery Icon Symbol" title="53%">
+        <p class="user">USER: Fawn Green</p>
+        <p class="version">version 0.0.1</p>
+        <body onload=display_ct();>
+        <p id='datetime' class="datetime"></p>
+    </header>
+    <main>
+        <!--DESKTOP FILES-->
+        <aside class="left">
+            <figure id="folder_icon" >
+                <img src="images/folder_base.png" onclick="ShowHide('gif_folder')" alt="Folder Icon" title="favorite_gifs">
+                <figcaption>favorite_gifs</figcaption>
+            </figure>
+            <figure id="note_icon">
+                <img src="images/file_base.png" onclick="ShowHide('note_file')" alt="File Icon" title="notes.txt">
+                <figcaption>notes.txt</figcaption>  
+            </figure> 
+            <figure id="note_icon">
+                <img src="images/file_base.png" onclick="ShowHide('poem_file')" alt="File Icon" title="poetry_hw.txt">
+                <figcaption>poetry_hw.txt</figcaption>  
+            </figure>
+        </aside>
+        <aside class="right">
+            <figure id="folder_icon">
+                <img src="images/folder_base.png" onclick="ShowHide('pic_folder')" alt="Folder Icon" title="pics">
+                <figcaption>pics</figcaption>
+            </figure>
+            <figure id="app_icon">
+                <img src="images/messenger_app.png" onclick="ShowHide('chat_room')" alt="Messenger App Icon" title="Chat Room">
+                <figcaption>Chat Room</figcaption>
+            </figure>            
+        </aside>
+        <aside class="right">
+            <figure id="note_icon">
+                <img src="images/file_base.png" onclick="ShowHide('login_file')" alt="File Icon" title="TOP_SECRET.txt">
+                <figcaption>TOP_SECRET.txt</figcaption>  
+            </figure>   
+        </aside>
+        <!--GIFS FOLDER-->
+        <section id="gif_folder" class="gifs"  onclick="MoveFront('gif_folder')">
+            <header id="gif_folder_header1" class="window"> 
+                <h1> favorite_gifs </h1>
+                <img src="images/x_button.png" onclick="ShowHide('gif_folder')" alt="Close window button" title="close">
+            </header>
+            <main class="window">
+                <figure class="gif_file" id="hotdog_file">
+                    <img src="images/img_base.png" alt="Image Icon" title="hotdog.gif" onclick="ShowHide('hotdog')">
+                    <figcaption >hotdog.gif</figcaption>
+                </figure>
+                <figure class="gif_file" id="panda_file">
+                    <img src="images/img_base.png" alt="Image Icon" title="panda.gif" onclick="ShowHide('panda')">
+                    <figcaption >panda.gif</figcaption>
+                </figure>
+            </main>
+        </section>
+        <!--PICS FOLDER-->
+        <section id="pic_folder" class="pics"  onclick="MoveFront('pic_folder')">
+            <header id="pic_folder_header1" class="window"> 
+                <h1> pics </h1>
+                <img src="images/x_button.png" onclick="ShowHide('pic_folder')" alt="Close window button" title="close">
+            </header>
+            <main class="window">
+            </main>
+        </section>
+        <!--ACTUALGIFS-->
+        <figure id="hotdog" class="gif_img"  onclick="MoveFront('hotdog')">
+            <header id="hotdog_header1" class="window">
+                <h1> hotdog.gif </h1>
+                <img src="images/x_button.png" onclick="ShowHide('hotdog')" alt="Close window button" title="close">
+            </header>
+            <img src="images/gifs/hotdog.gif" alt="hotdog walking animation" title="hotdog.gif">
+        </figure>
+        <figure id="panda" class="gif_img" onclick="MoveFront('panda')">
+            <header id="panda_header1" class="window">
+                <h1> panda.gif </h1>
+                <img src="images/x_button.png" onclick="ShowHide('panda')" alt="Close window button" title="close">
+            </header>
+            <img src="images/gifs/dancing_panda.gif" alt="panda dancing animation" title="panda.gif">
+        </figure>
+        <!--NOTE.TXT-->
+        <section id="note_file" class="note"  onclick="MoveFront('note_file')">
+            <header id="note_file_header1" class="window"> 
+                <h1> notes.txt </h1>
+                <img src="images/x_button.png" onclick="ShowHide('note_file')" alt="Close window button" title="close">
+            </header>
+            <main class="window">
+                <p> version 0.0.1</p>
+                <p> created by stepanee</p>
+                <p> artwork by aeijanart</p>
+                <p> inspired by <a href="http://www.chiptune.com" target="_blank">www.chiptune.com</a></p>
+                <div class="text"><textarea id="text_notes" placeholder="Type here..."></textarea></div>
+            </main>
+        </section>
+        <!--POETRY_HW.TXT-->
+        <section id="poem_file" class="poem" onclick="MoveFront('poem_file')">
+            <header id="note_file_header1" class="window"> 
+                <h1> poetry_hw.txt </h1>
+                <img src="images/x_button.png" onclick="ShowHide('poem_file')" alt="Close window button" title="close">
+            </header>
+            <main class="window">
+                <div class="text"><textarea id="text_notes" placeholder="Type here...">CLASS: POETRY 178B&#13;&#10;DUE: NEXT WEDNESDAY&#13;&#10;&#13;&#10;OF THE TREES-&#13;&#10;The rumbling of the train as it flies by&#13;&#10;Sends the crips air past her rosey flushed cheeks&#13;&#10;She lies in the cold embrace of the sky &#13;&#10;And watches the city that she finds bleak &#13;&#10;She runs to the mountains that sing her name&#13;&#10;The trees and winds they all welcome her soul&#13;&#10;The days and nights pass by so unashamed&#13;&#10;While she holds onto moments that time stole&#13;&#10;She returns to the hum of busy streets&#13;&#10;Her somber mood so in tune with the rain&#13;&#10;She walks over the trash and old receipts&#13;&#10;And gazes through the dirty window panes&#13;&#10;She longs for the autumns within the trees&#13;&#10;That she must wait until next year to see&#13;&#10;</textarea></div>
+            </main>
+        </section>
+        <!--LOGIN.TXT-->
+        <section id="login_file" class="login" onclick="MoveFront('login_file')">
+            <header id="login_file_header1" class="window"> 
+                <h1> TOP_SECRET.txt </h1>
+                <img src="images/x_button.png" onclick="ShowHide('login_file')" alt="Close window button" title="close">
+            </header>
+            <main class="window">
+                <p> chatroom login </p>
+                <p> user: fawngreen11</p>
+                <p> password: !girlCoffee19</p>
+                <div class="text"><textarea id="text_notes" placeholder="Type here..."></textarea></div>
+            </main>
+        </section>
+        <!--CHAT ROOM-->
+        <section id="chat_room" class="chat" onclick="MoveFront('chat_room')">
+            <header id="chat_header" class="window">
+                <h1> Chat Room </h1>
+                <img src="images/x_button.png" onclick="ShowHide('chat_room')" alt="Close window button" title="close">
+                <img id="logout" onclick="LogOut()"src="images/logout_button.png" alt="Log out button" title="log out">
+            </header>
+            <article class="login_popup" id="login_prompt">
+                <h1 style="padding-bottom: 0em;">WELCOME!</h1>
+                <h1 style="padding-top: 0em;"> PLEASE SIGN IN.</h1>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Type here..." name="uname" id="username" required>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Type here..." name="psw" id="password" required>
+                <button onclick="ChatLogin()" alt="Chat room login submit button">SIGN IN</button>
+                <p id="error_message">* Username and/or Password is incorrect *</p>
+            </article>
+            <div id="mandy_chat">
+                <div class="chat-title">
+                  <figure class="avatar">
+                    <img src="images/mandy_cropped.jpg">
+                </figure>
+                <h3>mandyyy08</h3>
+                </div>
+                <div class="messages" id="messages">
+                  <div class="messages-content" id="messages-content">
+                  </div>
+                </div>
+                <div class="message-box">
+                  <textarea type="text" class="message-input" placeholder="Type message..." id="user"></textarea>
+                  <button type="submit" class="message-submit" onclick="Chat()">Send</button>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
